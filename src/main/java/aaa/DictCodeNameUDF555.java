@@ -74,6 +74,15 @@ public class DictCodeNameUDF555 extends GenericUDF {
 
                 }catch (SQLException e){
                         throw new RuntimeException("报错啦啦啦啦啦");
+                }finally {
+                        try {
+                                if(connection != null){
+                                        connection.close();
+                                }
+                                connection.close();
+                        } catch (SQLException e) {
+                                e.printStackTrace();
+                        }
                 }
         }
 
